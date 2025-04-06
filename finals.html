@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Condo Tri-Fold Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: Montserrat;
+            font-size: 14px;
+            font-weight: 400;
+            background-color: black;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            width: 100vw;
+            height: 100vh;
+        }
+        .section {
+            flex: 1;
+            padding: 40px;
+            box-sizing: border-box;
+            overflow-y: auto;
+            height: 100vh;
+        }
+        #introduction {
+            background: #595958;
+            color: white;
+            text-align: justify;
+        }
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            color: #69a39c;
+            font-family: Playfair Display;
+        }
+        h4 {
+            font-size: 8px;
+            font-weight: 200;
+        }
+        .slideshow {
+            position: relative;
+            max-width: 100%;
+            margin: 20px auto;
+        }
+        .slide {
+            display: none;
+            width: 100%;
+            border-radius: 10px;
+        }
+        .slide.active {
+            display: block;
+            animation: fade 1s ease-in-out;
+        }
+        @keyframes fade {
+            from { opacity: 0.4; }
+            to { opacity: 1; }
+        }
+        h2{
+            text-align: center;
+            font-size: 24px;
+            color:  #333;
+            font-family: Playfair Display;
+        }
+        #facilities {
+            background: #69a39c;
+            text-align: justify;
+        }
+        .facility-slideshow, .manual-carousel {
+            position: relative;
+            max-width: 100%;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .facility-slide, .manual-slide {
+            display: none;
+            width: 100%;
+            border-radius: 10px;
+        }
+        .facility-slide.active, .manual-slide.active {
+            display: block;
+            animation: fade 1s ease-in-out;
+        }
+        .caption {
+            margin-top: 20px;
+            margin-bottom: -5px;
+            font-size: 1.1em;
+            color:  #333;
+            font-family: Raleway;
+        }
+        .manual-controls {
+            margin-top: 10px;
+        }
+        .manual-controls button {
+            padding: 10px 15px;
+            margin: 0 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #767676;
+            color: white;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .manual-controls button:hover {
+            background-color: #555;
+        }
+        .amenities-list {
+            font-size: 14px;
+            color:  #333;
+            font-family: Raleway;
+            font
+        }
+        #newsletter {
+            background: #e8b673;
+            color: black;
+            text-align: center;
+        }
+        h3{
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+            font-family: Playfair Display;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+        input, button {
+            padding: 10px;
+            width: 80%;
+            max-width: 300px;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+            font-family: Raleway;
+        }
+        button:hover {
+            background-color: #555;
+        }
+        img {
+            border-radius: 10px;
+        }
+        .logo {
+            margin-top: 20px;
+            margin-left: -25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section id="introduction" class="section">
+            <h1>WELCOME TO THE RISE MAKATI</h1>
+
+            <p>Located conveniently within 8 minutes walking distance from the Makati CBD, at the heart of the burgeoning North Makati (NOMA) district.</p>
+
+            <p>The RISE combines celebrated world-class architecture and interior design, with Shang Properties’ signature build quality to create a one-of-a-kind residential and commercial development.</p>
+
+            <div class="slideshow">
+                <img src="rise.jpg" class="slide active" alt="Slide 1">
+                <img src="rise2.jpg" class="slide" alt="Slide 2">
+                <img src="rise3.jpg" class="slide" alt="Slide 3">
+                <img src="rise4.jpg" class="slide" alt="Slide 4">
+                <img src="rise5.jpg" class="slide" alt="Slide 5">
+                <img src="rise6.jpg" class="slide" alt="Slide 6">
+            </div>
+
+            <h1>WHERE IS THE RISE?</h1>
+
+            <p>The RISE is situated at the heart of NOMA, or North Makati - the burgeoning art, design, and culinary district just north of Ayala Avenue. The area is known for its unique mix of galleries, delicatessens, indie music venues, and one-of-a-kind retail experiences - all of which is only a stone's throw from The RISE.</p>
+
+            <p>What better place to experience this thriving and ever-changing community of artists, chefs, and creatives than at The RISE!</p>
+
+            <div class="view">
+                <img src="view.jpg" width="100%">
+            </div>
+
+            <p>Our site development plan shows us a birds eye view of how the exterior landscape and greenery will be built as well as showing the close proximity of key major roads and developments.</p>
+
+            <h4>The RISE is brought to you by The RISE Development Company, Inc., a wholly-owned company of Shang Properties, Inc. Shang Properties, Inc. is an affiliate of Shangri-La Hotels and Resorts worldwide, and Kerry Properties Limited, one of Hong Kong's largest property investment and development companies with premier residential and commercial projects in China, Hong Kong, Macau and Australia.</h4>
+
+        </section>
+
+        <section id="facilities" class="section">
+            <h2>OUR AMENITIES AND SERVICES</h2>
+
+            <p>With two levels and more than 50 vendors for dining, retail, and services, you’re never more than a few short steps away from everything you’ll need in our boutique retail mall.</p>
+
+            <p>From uniquely quirky cafes and bars to the best dining experiences, banks, daycare centers, convenience stores, tailors, and spa services, we've assembled the best retailers and service providers to ensure that The RISE has something for everyone.</p>
+
+            <p>The RISE has three basement levels for vehicle parking consisting of 746 spaces. Our goal is to provide convenience for our residents and visitors alike.</p>
+
+            <div class="facility-slideshow">
+                <img src="amenities1.jpg" class="facility-slide active" alt="Facility 1">
+                <img src="amenities5.jpg" class="facility-slide" alt="Facility 2">
+                <img src="amenities7.jpg" class="facility-slide" alt="Facility 3">
+                <img src="amenities2.jpg" class="facility-slide" alt="Facility 4">
+                <img src="amenities4.jpg" class="facility-slide" alt="Facility 5">
+                <img src="amenities6.jpg" class="facility-slide" alt="Facility 6">
+                <img src="amenities3.jpg" class="facility-slide" alt="Facility 7">
+                <div class="caption" id="facility-caption">The Hangout - Lounge Area</div>
+            </div>
+
+            <div class="amenities">
+                <img src="amenities.jpg" width="100%">
+            </div>
+
+            <div class="amenities-list">
+                    <ul style="width:40%; float:left;">
+                        <li>Reception</li>
+                        <li>The Nest Lounge</li>
+                        <li>The Hangout Lounge</li>
+                        <li>The Workshop Lounge</li>
+                        <li>Gym Area</li>
+                        <li>Pilates/Yoga Rooms</li>
+                        <li>Changing Rooms/Sauna</li>
+                        <li>Party/Function Rooms</li>
+                        <li>Infants' Play Area</li>
+                        <li>Toddlers' Play Area</li>
+                        <li>Billiards Room</li>
+                        <li>Library</li>
+                    </ul>
+
+                    <ul style="width:40%; float:left;">
+                        <li>Karaoke/Cinema Rooms</li>
+                        <li>Main Pool</li>
+                        <li>Kids Pool</li>
+                        <li>Floating Loungers</li>
+                        <li>Sun Deck</li>
+                        <li>Poolside Lounge</li>
+                        <li>Jogging Trail</li>
+                        <li>Outdoor Play Area</li>
+                        <li>The Lawn</li>
+                        <li>Promenade</li>
+                        <li>Barbecue Area</li>
+                    </ul>
+            </div>
+
+            <div class="manual-carousel">
+                <img src="review.png" class="manual-slide active" alt="Manual Slide 1">
+                <img src="review2.png" class="manual-slide" alt="Manual Slide 2">
+                <img src="review3.png" class="manual-slide" alt="Manual Slide 3">
+                <div class="manual-controls">
+                    <button onclick="prevManualSlide()">NEXT</button>
+                    <button onclick="nextManualSlide()">PREVIOUS</button>
+            </div>
+
+        </section>
+
+        <section id="newsletter" class="section">
+            <h3>GET THE LASTEST UPDATES</h3>
+            <p>Sign up to get the latest events, news, and more...</p>
+            <form id="newsletter-form">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email Address" required>
+                <button type="submit">SUBSCRIBE</button>
+            </form>
+
+            <div class="logo">
+                <img src="logo.png" width="35%">
+                <img src="dpo.png" width="19%" float="left">
+            </div>
+        </section>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+        }
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+        setInterval(nextSlide, 5000);
+
+        let currentFacility = 0;
+        const facilitySlides = document.querySelectorAll('.facility-slide');
+        const facilityCaptions = [
+            "The Hangout - Lounge Area",
+            "The Hangout - Lounge Area",
+            "Gym Area",
+            "Gym Area",
+            "Billiards Room",
+            "Pool Area",
+            "Kid's Zone - Toddlers' Play Area"
+        ];
+        const captionElement = document.getElementById('facility-caption');
+
+        function showFacility(index) {
+            facilitySlides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+            captionElement.textContent = facilityCaptions[index];
+        }
+
+        function nextFacility() {
+            currentFacility = (currentFacility + 1) % facilitySlides.length;
+            showFacility(currentFacility);
+        }
+
+        setInterval(nextFacility, 8000);
+
+        let manualIndex = 0;
+        const manualSlides = document.querySelectorAll('.manual-slide');
+
+        function showManualSlide(index) {
+            manualSlides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                    slide.classList.add('active');
+                }
+            });
+        }
+
+        function nextManualSlide() {
+            manualIndex = (manualIndex + 1) % manualSlides.length;
+            showManualSlide(manualIndex);
+        }
+
+        function prevManualSlide() {
+            manualIndex = (manualIndex - 1 + manualSlides.length) % manualSlides.length;
+            showManualSlide(manualIndex);
+        }
+    </script>
+</body>
+</html>
